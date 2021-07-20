@@ -24,7 +24,7 @@ This is the Backend Api for the Sessions App. The app allows a user/singer or ra
 
 * update "projects/:id = requires login from user to update a project.
 
-* post "projects/:id/proposals = require nothing, anyone can make a proposal.
+* post "projects/:id/proposals = requires nothing, anyone can make a proposal.
 
  
 
