@@ -6,7 +6,7 @@ This is the Backend Api for the Sessions App. The app allows a user/singer or ra
 
 # users 
 
-* get "users/" = requires login. Retrieves list of all users.
+* `get "users/" = requires login. Retrieves list of all users.`
 * get "users/id" = requires correct users login credentials. Retrieves information on specific user.
 * post "users/" = Adds a new user. Expects the following data. username, password, first_name, last_name, email.
 * patch "users/:id = requires correct users login information. Allows user to update profile
