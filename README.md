@@ -18,7 +18,7 @@ This is the Backend Api for the Sessions App. The app allows a user/singer or ra
 
 * `get "projects/:id" = requires nothing anyone can look a projects, which is a specific project obtained by the id.`
 
-*` post "projects/" = requires login from user to post a project.`
+* `post "projects/" = requires login from user to post a project.`
 
 * `delete "projects/:id = requires login from user to delete a project.`
 
