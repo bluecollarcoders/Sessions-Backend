@@ -1,6 +1,6 @@
 "use strict";
 
-// Express app for session
+// Express app for sessions
 
 const express = require("express");
 const cors = require("cors");
