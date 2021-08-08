@@ -48,6 +48,7 @@
             "title": "The producer_name schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "minLength": 1,
             "examples": [
                 "Mayhem"
             ]
