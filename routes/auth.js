@@ -13,7 +13,7 @@ const { createToken } = require("../helpers/token");
 const { BadRequestError } = require("../expressError");
 
 // Post /auth/register
-router.post("/login", async function (req, res, next) {
+router.post("/token", async function (req, res, next) {
   try {
     const validator = jsonschema.validate(req.body, userAuthSchema);
     if (!validator.valid) {

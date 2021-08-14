@@ -23,21 +23,41 @@ class Projects {
     const result = await db.query(
       `SELECT id, title, project_name, project_description, music_link FROM projects`
     );
+
     return result.rows;
   }
 
   // Get By Id
   static async getById(id) {
+    // const result = await db.query(
+    //   ` SELECT title, project_name, project_description, music_link FROM projects WHERE id =$1`,
+    //   [id]
+    // );
     const result = await db.query(
-      ` SELECT title, project_name, project_description, music_link FROM projects WHERE id =$1`,
+      ` SELECT * FROM projects LEFT JOIN proposals ON  projects.id = proposals.projects_id WHERE projects.id =$1`,
       [id]
     );
+
+    const proposals = [];
+
+    for (let i = 0; i < result.rows.length; i++) {
+      const currentRow = result.rows[i];
+      proposals.push({
+        producer_name: currentRow.producer_name,
+        proposal_details: currentRow.proposal_details,
+        contact: currentRow.contact,
+      });
+    }
+
+    const data = result.rows[0];
+
+    data.proposals = proposals;
 
     if (result.rows.length === 0) {
       throw new NotFoundError(`No such project: ${id}`);
     }
 
-    return result.rows[0];
+    return data;
   }
 
   // Deleting a project

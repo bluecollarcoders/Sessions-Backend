@@ -15,7 +15,7 @@
         }
     ],
     "required": [
-        "id",
+    
         "title",
         "project_name",
         "project_description",

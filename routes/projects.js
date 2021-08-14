@@ -8,6 +8,7 @@ const { ensureLoggedIn } = require("../middleware/auth");
 const Projects = require("../models/projectModel");
 const projectNewSchema = require("../schemas/projects.json");
 const propsalSchema = require("../schemas/proposal.json");
+const { DB_URI } = require("../config");
 
 const router = express.Router();
 
