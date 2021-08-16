@@ -59,6 +59,7 @@
             "title": "The proposal_details schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "minLength": 1,
             "examples": [
                 "I open too working on the dela soul type project I charge 500 per song"
             ]
@@ -69,6 +70,7 @@
             "title": "The contact schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "minLength": 1,
             "examples": [
                 "mayhem@gmail.com"
             ]
